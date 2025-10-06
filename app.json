@@ -4,28 +4,41 @@
 		"slug": "my-mobile-app",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"icon": "./assets/icon.png",
+		"icon": "./app/assets/icon.png",
 		"userInterfaceStyle": "light",
+		"jsEngine": "hermes",
 		"newArchEnabled": true,
 		"splash": {
-			"image": "./assets/splash-icon.png",
+			"image": "./app/assets/splash-icon.png",
 			"resizeMode": "contain",
 			"backgroundColor": "#ffffff"
 		},
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"requireFullScreen": true
+			"requireFullScreen": true,
+			"bundleIdentifier": "com.maxzbs.redflix",
+			"jsEngine": "hermes"
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "./assets/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
+				"foregroundImage": "./app/assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff",
+				"jsEngine": "hermes"
 			},
 			"edgeToEdgeEnabled": true,
 			"predictiveBackGestureEnabled": false
 		},
 		"web": {
-			"favicon": "./assets/favicon.png"
+			"favicon": "./app/assets/favicon.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": "6b58d1cf-c30d-4ab1-9f27-f19a05eb3fb5"
+			}
 		}
 	}
 }
